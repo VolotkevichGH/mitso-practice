@@ -1,7 +1,11 @@
 package com.mslu.applicant.entity.references;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 public class TypeSchool {
     @Id
@@ -10,19 +14,4 @@ public class TypeSchool {
 
     private String fullName;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
 }

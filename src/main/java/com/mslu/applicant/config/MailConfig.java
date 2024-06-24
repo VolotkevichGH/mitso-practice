@@ -26,8 +26,8 @@ public class MailConfig {
     @Value("${spring.mail.protocol}")
     private String protocol;
 
-    @Value("${mail.debug}")
-    private String debug;
+//    @Value("${mail.debug}")
+//    private String debug;
 
     @Bean
     public JavaMailSender getMailSender() {
@@ -40,7 +40,7 @@ public class MailConfig {
 
         Properties properties = mailSender.getJavaMailProperties();
         properties.setProperty("mail.transport.protocol", protocol);
-        properties.setProperty("mail.debug", debug);
+//        properties.setProperty("mail.debug", debug);
 
         return mailSender;
     }

@@ -4,9 +4,11 @@ import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -14,10 +16,11 @@ import org.springframework.stereotype.Service;
 import java.util.Properties;
 
 @Service
+@ComponentScan("com.mslu.applicant.config")
 public class MailSender {
 
-    @Autowired
-    private JavaMailSender mailSender;
+    private final JavaMailSender mailSender;
+
 
     @Value("${spring.mail.username}")
     private String username;
@@ -27,6 +30,11 @@ public class MailSender {
     private String port;
     @Value("${spring.mail.password}")
     private String password;
+
+    public MailSender(JavaMailSender mailSender) {
+        this.mailSender = mailSender;
+    }
+
     public void send(String emailTo, String subject, String message) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
 

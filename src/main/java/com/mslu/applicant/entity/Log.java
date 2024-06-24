@@ -1,8 +1,13 @@
 package com.mslu.applicant.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 
+@Setter
+@Getter
 @Entity
 public class Log {
     @Id
@@ -18,35 +23,4 @@ public class Log {
 
     private String message;
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getActionTime() {
-        return actionTime;
-    }
-
-    public void setActionTime(LocalDateTime actionTime) {
-        this.actionTime = actionTime;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
 }

@@ -1,7 +1,11 @@
 package com.mslu.applicant.entity.references;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 public class Language {
     @Id
@@ -16,43 +20,4 @@ public class Language {
 
     private boolean foreignLanguage;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getShortName() {
-        return shortName;
-    }
-
-    public void setShortName(String shortName) {
-        this.shortName = shortName;
-    }
-
-    public boolean isStateLanguage() {
-        return stateLanguage;
-    }
-
-    public void setStateLanguage(boolean stateLanguage) {
-        this.stateLanguage = stateLanguage;
-    }
-
-    public boolean isForeignLanguage() {
-        return foreignLanguage;
-    }
-
-    public void setForeignLanguage(boolean foreignLanguage) {
-        this.foreignLanguage = foreignLanguage;
-    }
 }

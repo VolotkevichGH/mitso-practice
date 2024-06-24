@@ -1,7 +1,11 @@
 package com.mslu.applicant.entity.references;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 public class Year {
     @Id
@@ -10,19 +14,4 @@ public class Year {
 
     private Integer name;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getName() {
-        return name;
-    }
-
-    public void setName(Integer name) {
-        this.name = name;
-    }
 }

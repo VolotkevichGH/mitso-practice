@@ -16,10 +16,10 @@ import freemarker.cache.TemplateLoader;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 
 import java.io.FileInputStream;
@@ -28,12 +28,12 @@ import java.io.IOException;
 import java.io.StringWriter;
 
 @Service
+@RequiredArgsConstructor
 public class PDFGenerateService {
-    @Autowired
-    private ProfileRepository profileRepository;
 
-    @Autowired
-    private DistrictRepository districtRepository;
+
+    private final ProfileRepository profileRepository;
+    private final DistrictRepository districtRepository;
 
     public InputStreamResource html2PdfGenerator(String nameTemplate, User user, Model model) throws java.io.IOException, TemplateException {
 

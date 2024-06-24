@@ -1,7 +1,11 @@
 package com.mslu.applicant.entity.references;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 public class Area {
     @Id
@@ -16,35 +20,4 @@ public class Area {
 
     private boolean hasLocality;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Country getCountry() {
-        return country;
-    }
-
-    public void setCountry(Country country) {
-        this.country = country;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public boolean isHasLocality() {
-        return hasLocality;
-    }
-
-    public void setHasLocality(boolean hasLocality) {
-        this.hasLocality = hasLocality;
-    }
 }

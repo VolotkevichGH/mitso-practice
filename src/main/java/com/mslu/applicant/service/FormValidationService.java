@@ -13,8 +13,8 @@ import java.util.UUID;
 @Service
 public class FormValidationService {
 
-//    @Value("${upload.path}")
-    private String uploadPath = "D:/work/projects/applicant/src/main/resources/uploads";
+    @Value("${upload.path}")
+    private String uploadPath;
 
 
     public boolean isPhotoValid (MultipartFile filePhoto) {

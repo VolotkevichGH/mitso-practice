@@ -2,7 +2,11 @@ package com.mslu.applicant.entity.references;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 public class TypeDocument {
     @Id
@@ -17,19 +21,4 @@ public class TypeDocument {
       //  this.type = type;
     //}
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
 }

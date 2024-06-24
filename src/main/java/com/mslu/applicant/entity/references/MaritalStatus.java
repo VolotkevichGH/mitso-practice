@@ -1,7 +1,11 @@
 package com.mslu.applicant.entity.references;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 public class MaritalStatus {
     @Id
@@ -14,35 +18,4 @@ public class MaritalStatus {
 
     private String statusForWoman;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getStatusForMan() {
-        return statusForMan;
-    }
-
-    public void setStatusForMan(String statusForMan) {
-        this.statusForMan = statusForMan;
-    }
-
-    public String getStatusForWoman() {
-        return statusForWoman;
-    }
-
-    public void setStatusForWoman(String statusForWoman) {
-        this.statusForWoman = statusForWoman;
-    }
 }
